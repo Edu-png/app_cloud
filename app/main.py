@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.responses import StreamingResposnse
+from starlette.responses import StreamingResponse
 
 app = FastAPI()
 
