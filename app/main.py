@@ -20,7 +20,6 @@ def get_iris():
     plt.xlabel("Sepal length")
     plt.ylabel("Sepal width")
     plt.title("Iris dataset (2D)")
-    plt.show()
 
     # PCA 3D
     fig = plt.figure(figsize=(8,6))
@@ -43,6 +42,6 @@ def get_iris():
     ax.set_zlabel("3rd eigenvector")
 
     fig.savefig('iris.png')
-    file = open('iris.png', mode = "rg")
+    file = open('iris.png', mode='rb')
 
     return StreamingResponse(file, media_type = "image/png")
