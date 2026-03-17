@@ -1,5 +1,18 @@
+#Atual
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/project-2ea52c4e-c1c9-49d6-8a8/first_app', '.']
-- name:  'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/project-2ea52c4e-c1c9-49d6-8a8/first_app']
+  args: [
+    'build',
+    '-t',
+    'us-docker.pkg.dev/project-2ea52c4e-c1c9-49d6-8a8/app-repo/app',
+    '.'
+  ]
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'push',
+    'us-docker.pkg.dev/project-2ea52c4e-c1c9-49d6-8a8/app-repo/app'
+  ]
+
+images:
+- 'us-docker.pkg.dev/project-2ea52c4e-c1c9-49d6-8a8/app-repo/app'
